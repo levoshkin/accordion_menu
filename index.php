@@ -3,34 +3,7 @@
 <head>
 <title>Создание меню</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-<style>
-.accordion-menu {
-	width: 240px;
-	background: #F5F5F5;
-	border-radius: 5px;
-	padding: 10px;
-	text-transform: uppercase;
-	font-weight: bold;
-	font-size: 12px;
-}
-
-.accordion-menu li {
-	list-style: none;
-	padding-bottom: 5px;
-	padding-top: 5px;
-}
-
-.accordion-menu a {
-	text-decoration: none;
-	color: #888888;
-}
-
-.accordion-menu span {
-	float: right;
-	font-size: 12px;
-	color: #999999;
-}
-</style>
+<link rel="stylesheet" href="style.css">
 <script>
 $(document).ready(function(){
 	$('.accordion-menu li ul').css('display', 'none');
