@@ -50,11 +50,5 @@ $(document).ready(function(){
 	<div class="accordion-menu">
 		<?php getMenuHtml($tree)?>
 	</div>
-	
-	<div>
-	
-	</div>
-	
-	
 </body>
 </html>
