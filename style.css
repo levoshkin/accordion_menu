@@ -1,26 +1,79 @@
 .accordion-menu {
-	width: 200px;
+    /* font-family: "CenturyGothicRegular","Century Gothic",Arial,Helvetica,sans-serif; */
+	width: 213px;
 	background: #F5F5F5;
 	border-radius: 5px;
-	padding: 10px;
-	text-transform: uppercase;
-	font-weight: bold;
-	font-size: 10px;
+    padding: 40px 28px 25px 0;
 }
 
-.accordion-menu li {
-	list-style: none;
+ul.accordion-menu {
+    font-size: 1em;
+    line-height: 0.5em;
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 11px;
+}
+
+ul.accordion-menu li {
+	list-style: none outside none;
 	padding-bottom: 5px;
 	padding-top: 5px;
 }
 
-.accordion-menu a {
-	text-decoration: none;
-	color: #888888;
+ul.accordion-menu li a {
+    color: #777777;
+    display: block;
+    font-size: 11px;
+    font-weight: bolder;
+    line-height: 10px;
+    padding: 10px 5px;
+    text-decoration: none;
+    background: #f2f2f2;
+    border-bottom: 1px solid #D3D3D3;
 }
 
-.accordion-menu span {
-	float: right;
-	font-size: 10px;
-	color: #999999;
+ul.accordion-menu a:hover {
+    background-color: #7D7D7D;
+    color: white;	
 }
+
+ul.accordion-menu ul {
+    display: none;
+    margin: 0;
+    padding: 0;
+}
+ul.accordion-menu ul li {
+    clear: both;
+    margin: 0;
+    padding: 0;
+}
+ul.accordion-menu ul li a {
+    font-size: 10px;
+    font-weight: normal;
+    outline: 0 none;
+    padding-left: 20px;
+}
+ul.accordion-menu ul li a:hover {
+    background-color: #DCDCDC;
+    color: #555;
+}
+ul.accordion-menu ul ul li a {
+    color: silver;
+    padding-left: 40px;
+}
+ul.accordion-menu ul ul li a:hover {
+    background-color: #D7D7D7;
+    color: #555555;
+}
+ul.accordion-menu span {
+    float: right;
+}
+
+/* .accordion-menu span {
+	float: right;
+	font-size: 11px;
+	color: #999999;
+} */

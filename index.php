@@ -8,8 +8,8 @@
 </head>
 <body>
 	<h1>MENU</h1>
-	<div class="accordion-menu">
+	<ul class="accordion-menu">
 		<?php getMenuHtml($tree)?>
-	</div>
+	</ul>
 </body>
 </html>
