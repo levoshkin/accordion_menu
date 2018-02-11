@@ -1,27 +1,20 @@
 <?php
 
-	$dsn = "mysql:dbname=createmenu;host=localhost";
+	$dsn = "mysql:dbname=createmenu;host=localhost;charset=utf8";
 	$db = new PDO($dsn, "root", "");
 	
 	$sql = "SELECT * FROM menu";
 	$data = $db->query($sql)->fetchAll();
 	
-	function debug($arr)
+	function getTree($data, $parent = 0)
 	{
-		echo '<pre>' . print_r($arr, true) . '</pre>';
-	}
-	
-	
-	function getTree($data, $parent = 0, $indent = '')
-	{
-		$tree = [];
+		$tree = array();
 		foreach($data as $id => &$node)
 		{
 			if($node['parent'] == $parent){
 				$tree[$node['id']] = &$node;
-				$tree[$node['id']]['indent'] .= $indent;
 				if(count(getTree($data, $node['id'])))
-				$tree[$node['id']]['children'] = getTree($data, $node['id'], $indent);
+					$tree[$node['id']]['children'] = getTree($data, $node['id']);
 			}
 		}
 		return $tree;
@@ -29,11 +22,11 @@
 	
 	$tree = getTree($data);
 	
-	function getMenuHtml($tree, $style='')
+	function getMenuHtml($tree)
 	{
 		foreach($tree as $category)
 		{
-			echo '<li id = "' . $category['id'] . '"' . $style . '"><a href="#" >' . $category['indent'] . $category['name'];
+			echo '<li id = "' . $category['id'] . '"><a href="#" >' . $category['name'];
 				if(isset($category['children'])){
 					echo '<span> [+] </span>';
 				}
@@ -46,6 +39,4 @@
 			echo '</li>';
 		}
 	}
-	
-	debug($category);
 ?>
