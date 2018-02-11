@@ -21,7 +21,7 @@
 				$tree[$node['id']] = &$node;
 				$tree[$node['id']]['indent'] .= $indent;
 				if(count(getTree($data, $node['id'])))
-				$tree[$node['id']]['children'] = getTree($data, $node['id'], $indent . '&nbsp; ');
+				$tree[$node['id']]['children'] = getTree($data, $node['id'], $indent);
 			}
 		}
 		return $tree;
