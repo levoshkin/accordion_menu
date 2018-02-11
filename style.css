@@ -5,7 +5,7 @@
 	padding: 10px;
 	text-transform: uppercase;
 	font-weight: bold;
-	font-size: 12px;
+	font-size: 16px;
 }
 
 .accordion-menu li {
@@ -21,6 +21,6 @@
 
 .accordion-menu span {
 	float: right;
-	font-size: 12px;
+	font-size: 10px;
 	color: #999999;
 }
