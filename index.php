@@ -3,29 +3,8 @@
 <head>
 <title>Создание меню</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="functions.js"></script>
 <link rel="stylesheet" href="style.css">
-<script>
-$(document).ready(function(){
-	$('.accordion-menu li ul').css('display', 'none');
-	if($('li').children('ul')){
-		$('li').click(function(){
-			var $this = $(this);
-			var $parent = $this.parent();
-			if(!$this.children('ul').is(':visible')){
-				$this.siblings().find('ul').slideUp(500);
-				$this.siblings().find('a').find('span').html('[+]');
-				$this.children('ul').slideDown(500);
-				$this.children('a').children('span').html('[ - ]');
-			}else if($this.children('ul').is(':visible')){
-				$this.children('ul').slideUp(500);
-				$this.find('a span').html("[+]");
-				
-			}
-			return false;
-		});
-	}
-});
-</script>
 </head>
 <body>
 	<h1>MENU</h1>
