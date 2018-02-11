@@ -21,7 +21,7 @@
 				$tree[$node['id']] = &$node;
 				$tree[$node['id']]['indent'] .= $indent;
 				if(count(getTree($data, $node['id'])))
-				$tree[$node['id']]['children'] = getTree($data, $node['id'], $indent . '&nbsp; &nbsp; ');
+				$tree[$node['id']]['children'] = getTree($data, $node['id'], $indent . '&nbsp; ');
 			}
 		}
 		return $tree;
@@ -35,7 +35,7 @@
 		{
 			echo '<li id = "' . $category['id'] . '"' . $style . '"><a href="#" >' . $category['indent'] . $category['name'];
 				if(isset($category['children'])){
-					echo '<span> &#9660; </span>';
+					echo '<span> [+] </span>';
 				}
 			echo '</a>';
 				if(isset($category['children'])){
